@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Interactive with the DOM</title>
+    </head>
+
+    <body>
+        <div id="domprac">welcome to my website</div>
+        <a href="DOMprac1.html">page 2</a>
+        <a href="DOMprac2.html">page 3</a>
+        <a href="DOMprac3.html">page 4</a>
+        <input type="button" onclick="myint()" value="back">
+        <br>
+        <div id="rolingnumber">0</div>
+
+        <script>
+            var output = document.getElementById('domprac');
+
+            var mytimer;
+            window.setTimeout(updateid, 1000);
+            function myint(){
+                mytimer =  window.setTimeout(myPopup, 5000);
+            }
+            function clearInt(){
+                window.clearInterval(myTimer);
+                //need if loop in the settimeout function
+            }
+            function myPopup(){
+                alert("Hello arjun shrestha welcome to my website");
+            }
+            function updateid(){
+                output.innerHTML = ' hello arjun shrstha welcome back';
+            }
+
+            var outputforrolling =document.getElementById('rollingnumber'); 
+            var rolltimer;
+            function rollit(){
+                for(var i = 0; i<= 10; i++){
+
+                    rolltimer = window.setTimeout(gogo(i), 1000);
+                }
+            }
+            gogo(Number){
+                outputforrolling.innerHTML = Number;
+            }
+
+
+        </script>
+    </body>
+</html>

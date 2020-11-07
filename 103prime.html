@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>prime/not</title>
+	<style type="text/css">
+		body{
+			background-color: #111111;
+			color: #ffffff;
+		}
+	</style>
+	<script type="text/javascript">
+		function prm(){
+			var i,flag=0,number;
+			number=Number(document.getElementById('numm').value);
+			for(i=2; i<=number-1; i++){
+				if(number%i==0){
+					flag=1;
+					break;
+				}
+			}
+			if(flag==0){
+				alert(number + ": " + "the inputed number is prime");
+			}
+			else{
+				alert(number + ": " + "the inputed number is not prime");
+			}
+			evenodd();
+		}
+		function evenodd(){
+			var number;
+			number=Number(document.getElementById('numm').value);
+			if(number%2==0){
+				alert(number + ": " + "the inputed number is even number");
+			}
+			else{
+				alert(number + ": " + "the inputed number is odd number");
+			}
+		}
+	</script>
+</head>
+<body>
+	<label>Enter the number:</label> 
+	<input type="text" border="2" name="prm1" id="numm">
+	<br>
+	<button type="button" onclick="prm()">Check it!</button>
+	<button type="button" onclick="evenodd()">check even or odd</button>
+</body>
+</html>

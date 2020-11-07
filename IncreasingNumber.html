@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Rolling Number
+        </title>
+    </head>
+    
+    
+    <!-- <P>pause for not known other animation i think
+    set timeout remove and set interval entry <br>
+    setinterval (function ( not needed)</P>
+    <div id="rollthisDivNumber">0</div> -->
+
+
+    <script>
+        var scrollingnumber = document.getElementById('rollthisDivNumber');
+        var num = 0;
+        var myCount;
+        myCount = window.setInterval(gogo/*function without () if no parameters*/, 2/*time in miliseconds*/);
+
+        function gogo(){
+            num++;
+            scrollingnumber.innerHTML = num;
+            if (num==2500){
+                clearInterval(myCount);
+            }
+        }
+        
+
+    </script>
+</html>
